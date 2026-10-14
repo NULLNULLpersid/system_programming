@@ -26,3 +26,6 @@ touch: touch.c
 
 unlink: unlink.c
 	gcc -o unlink unlink.c
+
+clean:
+	rm -f cptime fchmod ftype link list1 list2 rlink touch unlink
