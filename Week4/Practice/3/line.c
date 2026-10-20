@@ -4,9 +4,11 @@
 #define MAXLINE 80
 
 int main(int argc, char *argv[]) {
-    FILE *fp;
     int line = 0;
+
     char buffer[MAXLINE];
+
+    FILE *fp;
 
     if (argc != 2) {
         fprintf(stderr, "사용법:line 파일이름\n");
@@ -23,5 +25,6 @@ int main(int argc, char *argv[]) {
         line++;
         printf("%3d %s", line, buffer);
     }
+    
     exit(0);
 }
