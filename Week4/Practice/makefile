@@ -1,4 +1,4 @@
-all : 1/cat 2/copy 3/line 4/fprint 5/fscan 6/stcreate1 stprint stcreate2 stquery stupdate buffer
+all : 1/cat 2/copy 3/line 4/fprint 5/fscan 6/stcreate1 7/stprint 6/stcreate2 8/buffer
 
 1/cat : 1/cat.c
 	gcc -o 1/cat 1/cat.c
@@ -18,20 +18,14 @@ all : 1/cat 2/copy 3/line 4/fprint 5/fscan 6/stcreate1 stprint stcreate2 stquery
 6/stcreate1 : 6/stcreate1.c
 	gcc -o 6/stcreate1 6/stcreate1.c
 
-stprint : stprint.c
-	gcc -o stprint stprint.c
+7/stprint : 7/stprint.c
+	gcc -o 7/stprint 7/stprint.c
 
-stcreate2 : stcreate2.c
-	gcc -o stcreate2 stcreate2.c
+6/stcreate2 : 6/stcreate2.c
+	gcc -o 6/stcreate2 6/stcreate2.c
 
-stquery : stquery.c
-	gcc -o stquery stquery.c
-
-stupdate : stupdate.c
-	gcc -o stupdate stupdate.c
-
-buffer : buffer.c
-	gcc -o buffer buffer.c
+8/buffer : 8/buffer.c
+	gcc -o 8/buffer 8/buffer.c
 
 clean : 
-	rm -f 1/cat 2/copy 3/line 4/fprint 5/fscan 6/stcreate1 stprint stcreate2 stquery stupdate buffer
+	rm -f 1/cat 2/copy 3/line 4/fprint 5/fscan 6/stcreate1 7/stprint 6/stcreate2 8/buffer
